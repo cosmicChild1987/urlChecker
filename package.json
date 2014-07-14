@@ -1,0 +1,19 @@
+{
+  "name": "alanchurley-url-checker",
+  "version": "0.0.0",
+  "description": "Checks a given url and returns request time",
+  "main": "checker.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cosmicChild1987/urlChecker"
+  },
+  "author": "Alan Churley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cosmicChild1987/urlChecker/issues"
+  },
+  "homepage": "https://github.com/cosmicChild1987/urlChecker"
+}
