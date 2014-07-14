@@ -31,6 +31,6 @@ var http = require('http'),
       });
     }
   };
-module.exports = function() {
+module.exports = (function() {
   return urlChecker;
-};
+}());

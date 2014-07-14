@@ -5,7 +5,7 @@ Checks a given url, and returns an object containing the response time from the 
 
 Usage
 =====
-var urlChecker = require('alanchurley-url-checker')();
+var urlChecker = require('alanchurley-url-checker');
 urlChecker.checkUrl(urlDomain, port, path, callback);
 
 Where the urlDomain and path are strings, port is a integer, and callback is a function
