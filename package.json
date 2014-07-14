@@ -1,6 +1,6 @@
 {
   "name": "alanchurley-url-checker",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Checks a given url and returns request time",
   "main": "checker.js",
   "scripts": {
