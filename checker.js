@@ -1,7 +1,6 @@
 var http = require('http'),
   urlChecker = {
     checkUrl: function (url, port, path, callback) {
-      console.log('here');
       var options = {
           host: url,
           port: port,
@@ -21,7 +20,6 @@ var http = require('http'),
           );
         }
       }).on('error', function(e) {
-        console.log('error', e);
         if (callback) {
           callback(
             {
