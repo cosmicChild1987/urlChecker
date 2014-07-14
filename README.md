@@ -23,4 +23,4 @@ Response will be in the following format
 
 Status will either be 1 for a valid request, or 0 for an error
 
-time is the time in millseconds that the request took, if the status is 0, this will also be 0
+time is the time in millseconds that the request took, only supplied if status code is non 0

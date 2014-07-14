@@ -15,7 +15,9 @@ var http = require('http'),
           callback(
             {
               status: 1,
-              time: diff
+              time: diff,
+              httpStatus: res.statusCode,
+              request: options
             }
           );
         }
@@ -24,7 +26,7 @@ var http = require('http'),
           callback(
             {
               status: 0,
-              time: 0
+              request: options
             }
           );
         }
