@@ -1,6 +1,6 @@
 {
   "name": "alanchurley-url-checker",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Checks a given url and returns request time",
   "main": "checker.js",
   "scripts": {
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/cosmicChild1987/urlChecker/issues"
   },
-  "homepage": "https://github.com/cosmicChild1987/urlChecker"
+  "homepage": "https://github.com/cosmicChild1987/urlChecker",
+  "dependencies": {
+    "ws": "^0.4.31"
+  }
 }
