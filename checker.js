@@ -11,7 +11,7 @@ var http = require('http'),
         }
 
 
-        fs.writeFile(outputFile, '', function(err) {
+        fs.writeFile(outputFile, 'RequestDuration,Start,End\r\n', function(err) {
           if(err && err !== null) {
                 console.log(err);
               }
@@ -30,7 +30,7 @@ var http = require('http'),
         responseStream._read = function(){};
 
         responseStream.on('data', function(response) {
-            var stringToAppend = response.time + ',';
+            var stringToAppend = response.time + ',' + response.start.getTime() + ',' + response.end.getTime() + '\r\n';
             wss.broadcast(response.time.toString());
             fs.appendFile(outputFile, stringToAppend, function (err) {
               if(err && err !== null) {
@@ -66,7 +66,9 @@ var http = require('http'),
                 status: 1,
                 time: diff,
                 httpStatus: res.statusCode,
-                request: options
+                request: options,
+                start: start,
+                end: end
               }
             );
           }
@@ -76,11 +78,12 @@ var http = require('http'),
             callback(
               {
                 status: 0,
-                time: 0
+                time: 0,
+                start: start,
+                end: end
               }
             );
           }
-          res.resume();
         });
       }
     };
